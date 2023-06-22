@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Product Discount</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid p-5 bg-primary text-white text-center">
+  <h1>Product Discount Calculation</h1>
+  <p>Product Discount Calculation with pure javascript</p> 
+</div>
+  
+<div class="container mt-5">
+  <h5 class="text-center mb-5"> Product Discount Calculation </h5>
+  <div class="row">
+    <div class="col-sm-8">
+        <input type="text" id="ProductDiscount" class="form-control mb-3" placeholder="Product Price">
+        <input type="text" id="ProductDiscount" class="form-control mb-3" placeholder="Discount">
+        <button class="btn btn-dark" id="ProcustDiscountCalculation">Product Discount Calculation</button>
+    </div>
+    <div class="col-sm-4">
+        <h4>Discount: <span class="Pdiscount"></span></h4>
+        <h4>Final Price: <span class="Pdiscount"></span></h4>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+<script>
+
+document.querySelector(`#ProcustDiscountCalculation`).onclick = function(){
+
+    var[text1, text2] = document.querySelectorAll(`#ProductDiscount`);
+    var amount = parseFloat(text1.value);
+    var discount = parseFloat(text2.value);
+
+    console.log(amount, discount);
+
+    const discountshow = (amount * discount / 100);
+    console.log(discountshow);
+
+
+
+    var[Discount, FinalPrice] = document.querySelectorAll(`.Pdiscount`);
+    Discount.innerHTML = Math.round(discount);
+    FinalPrice.innerHTML = Math.round(discountshow);
+
+    console.log(discount, FinalPrice);
+
+
+
+
+
+
+
+
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
